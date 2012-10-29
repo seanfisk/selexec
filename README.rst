@@ -7,7 +7,9 @@ illustrates it best.
 
 Let's say you want to edit a few Python files in your project tree,
 but you're not sure *which ones* you'd like to edit without seeing
-them. Normally, you might run the following::
+them. Normally, you might run the following:
+
+.. code-block:: bash
 
     $ find . -name '*.py'
     eggs/bedevere.py
@@ -19,7 +21,9 @@ them. Normally, you might run the following::
 
 There's a bit of extra typing in the second command, which involves
 *re-typing* the names of the files. Why not just select them from the
-already-produced list? With **selexec**, you can::
+already-produced list? With **selexec**, you can:
+
+.. code-block:: bash
 
     $ find . -name '*.py' | slxc | xargs $EDITOR
 
@@ -32,8 +36,8 @@ echoed to standard output.
 uninstall a couple plugins for pytest_, but weren't sure of their
 names. It's pipeline time!
 
-::
- 
+.. code-block:: bash
+
     $ pip freeze | grep pytest | slxc | xargs pip uninstall --yes
 
 As you can see, with **selexec**, you can save a lot of time avoiding
