@@ -20,7 +20,7 @@ import sys, os
 sys.path.insert(0, os.path.abspath('../..'))
 
 # Import project metadata
-from my_module import metadata
+from selexec import metadata
 
 # -- General configuration -----------------------------------------------------
 
@@ -256,6 +256,6 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
-    'python' : ('http://docs.python.org/', None),
-    # 'PySide' : ('http://www.pyside.org/docs/pyside/', None)
+    'python' : ('http://docs.python.org/2.7/', None),
+    'urwid' : ('http://excess.org/urwid/docs/', None),
     }

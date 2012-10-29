@@ -1,4 +1,4 @@
-""":mod:`my_module` -- My awesome Python module
+""":mod:`selexec` -- Pipeline selection the UNIX way
 """
 
 import metadata
