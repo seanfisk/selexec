@@ -19,7 +19,7 @@ them. Normally, you might run the following::
 
 There's a bit of extra typing in the second command, which involves
 *re-typing* the names of the files. Why not just select them from the
-already-produced list. With **selexec**, you can::
+already-produced list? With **selexec**, you can::
 
     $ find . -name '*.py' | slxc | xargs $EDITOR
 
@@ -29,12 +29,16 @@ items in the list. Once the choice is made, the truncated list will be
 echoed to standard output.
 
 **selexec** is not limited to files only. Let's say you wanted to
-uninstall a couple plugins for pytest, but weren't sure of their
-names. It's pipeline time::
+uninstall a couple plugins for pytest_, but weren't sure of their
+names. It's pipeline time!
 
+::
+ 
     $ pip freeze | grep pytest | slxc | xargs pip uninstall --yes
 
 As you can see, with **selexec**, you can save a lot of time avoiding
 retyping items you've already seen.
 
 Enjoy using **selexec**!
+
+.. _pytest: http://pytest.org/
