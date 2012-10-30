@@ -2,6 +2,9 @@
  selexec
 =========
 
+.. image:: https://secure.travis-ci.org/seanfisk/selexec.png
+   :target: https://secure.travis-ci.org/seanfisk/selexec
+
 **selexec** provides pipline selection the UNIX way. A simple example
 illustrates it best.
 
