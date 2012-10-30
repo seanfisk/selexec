@@ -23,6 +23,14 @@ class MetaApplicationModel(object):
         """
         raise NotImplementedError()
 
+    def list_items(self):
+        """Return a list of items provided on stdin.
+
+        :return: list of items
+        :rtype: :class:`list` of :class:`str`
+        """
+        raise NotImplementedError()
+
 
 class ApplicationModel(MetaApplicationModel):
     def run(self, argv):
@@ -55,3 +63,6 @@ URL: <{url}>
         args = arg_parser.parse_args(args=argv[1:])
 
         self.started()
+
+    def list_items(self):
+        return sys.stdin.read().splitlines(False)

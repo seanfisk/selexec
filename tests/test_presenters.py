@@ -19,3 +19,12 @@ class TestPresenters:
         presenter.register_for_events()
         presenter.model.started.append.assert_called_once_with(
             presenter.view.start)
+        presenter.view.items_listed.append.assert_called_once_with(
+            presenter._list_items)
+
+    def test_list_items(self, presenter):
+        """When the list of items is requested by the user, it is shown."""
+        presenter.model.list_items.return_value = sentinel.items
+        presenter._list_items()
+        presenter.model.list_items.assert_called_once_with()
+        presenter.view.show_items.assert_called_once_with(sentinel.items)
