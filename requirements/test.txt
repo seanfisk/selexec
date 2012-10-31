@@ -1,3 +1,5 @@
+--requirement base.txt
+
 shovel
 py
 pytest
