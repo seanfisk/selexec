@@ -23,6 +23,7 @@ class MetaApplicationModel(object):
         """
         raise NotImplementedError()
 
+    @abstractmethod
     def list_items(self):
         """Return a list of items provided on stdin.
 
